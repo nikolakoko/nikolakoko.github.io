@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="Nikola Jordanoski, about, contact, education, hobbies, travel">
+    <meta name="description" content="Home page for biography of Nikola Jordanoski.">
+</head>
+<body>
+<script>
+    function changeBackground(element) {
+        const anchor = element.querySelector("a:hover");
+        if (!anchor) {
+            return;
+        }
+        element.style.backgroundColor = window.getComputedStyle(anchor).color;
+    }
+
+    function resetBackground(element) {
+        element.style.backgroundColor = "navajowhite";
+    }
+</script>
+<div id="home_background" onmouseover="changeBackground(this)" onmouseout="resetBackground(this)">
+    <div id="center_div">
+        <div>
+            <p>
+                Nikola Jordanoski
+            </p>
+        </div>
+        <hr>
+        <div>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Education.html">Education</a></li>
+                <li><a href="Hobbies.html">Hobbies</a></li>
+                <li><a href="Travel.html">Travel</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
